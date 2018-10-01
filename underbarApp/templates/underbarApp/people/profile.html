@@ -1,0 +1,93 @@
+{% include "../global/global.html" %}
+
+<input type='hidden' id='hiddenInput_currentpagedata' value='{"page":"/people/profile","uid":"2","uname":"칙칙"}'/>
+
+
+{% if 1 == 1 %} <!-- if this profile is mine -->
+<div class="profile-contents row">
+	<div class="profile-section profile-section-avatar col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-avatar" style="background-image:url('http://hellowoot.co.kr/static/asset/images/profile_images/13-4.png');background-color:#fbc531"></div>
+		<div class="profile-button-wrapper">
+			<woot-click href="/people/profile/edit">
+				<div class="profile-button button profile-button-edit">
+					<i class="ion-android-settings"></i>
+				</div>
+			</woot-click>
+		</div>
+	</div>
+	<div class="profile-section profile-section-info col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-info-name">칙칙</div>
+		<div class="profile-info-block">@ 파크하비오</div>
+		<div class="profile-info-intro">안녕하세요. 칙칙입니다. 이건 슬픈 자기소개서 친구들아 sing it togather 난 핸들이 고장난 eight ton 트럭</div>
+		<div class="profile-info-interest">
+			<span>축구</span>
+			<span>농구</span>
+			<span>낮술</span>
+			<span>와인</span>
+			<span>자전거</span>
+		</div>
+	</div>
+	<div class="profile-section profile-section-statistics col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-section-statistics-item row">
+			<div class="profile-section-statistics-tab button selected col-lg-8 col-md-8 col-sm-8 col-xs-8" data-tab="posting">
+				<span class="number">12</span>
+				<span class="title">게시물</span>
+			</div>
+			<div class="profile-section-statistics-tab button col-lg-8 col-md-8 col-sm-8 col-xs-8" data-tab="gathering">
+				<span class="number">4</span>
+				<span class="title">게더링</span>
+			</div>
+			<div class="profile-section-statistics-tab button col-lg-8 col-md-8 col-sm-8 col-xs-8" data-tab="woot">
+				<span class="number">3</span>
+				<span class="title">우트</span>
+			</div>
+		</div>
+	</div>
+	<div class="profile-section profile-section-history col-lg-24 col-md-24 col-sm-24 col-xs-24" id="profile-section-history">
+	</div>
+</div>
+{% else %}
+<div class="profile-contents row">
+	<div class="profile-section profile-section-avatar col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-avatar" style="background-image:url('http://hellowoot.co.kr/static/asset/images/profile_images/13-4.png');background-color:#fbc531"></div>
+		<div class="profile-button-wrapper">
+			<div class="profile-button button profile-button-like liked" data-uid="2">
+				<i class="ion-android-favorite"></i>
+			</div>
+			<div class="profile-button button profile-button-report" data-uid="2">
+				<i class="ion-android-alert"></i>
+			</div>
+		</div>
+	</div>
+	<div class="profile-section profile-section-info col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-info-name">칙칙</div>
+		<div class="profile-info-block">@ 파크하비오</div>
+		<div class="profile-info-intro">안녕하세요. 칙칙입니다. 이건 슬픈 자기소개서 친구들아 sing it togather 난 핸들이 고장난 eight ton 트럭</div>
+		<div class="profile-info-interest">
+			<span>축구</span>
+			<span>농구</span>
+			<span>낮술</span>
+			<span>와인</span>
+			<span>자전거</span>
+		</div>
+	</div>
+	<div class="profile-section profile-section-statistics col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-section-statistics-item row">
+			<div class="profile-section-statistics-tab button selected col-lg-8 col-md-8 col-sm-8 col-xs-8" data-tab="posting">
+				<span class="number">12</span>
+				<span class="title">게시물</span>
+			</div>
+			<div class="profile-section-statistics-tab button col-lg-8 col-md-8 col-sm-8 col-xs-8" data-tab="gathering">
+				<span class="number">4</span>
+				<span class="title">게더링</span>
+			</div>
+			<div class="profile-section-statistics-tab button col-lg-8 col-md-8 col-sm-8 col-xs-8" data-tab="woot">
+				<span class="number">3</span>
+				<span class="title">우트</span>
+			</div>
+		</div>
+	</div>
+	<div class="profile-section profile-section-history col-lg-24 col-md-24 col-sm-24 col-xs-24" id="profile-section-history">
+	</div>
+</div>
+{% endif %}

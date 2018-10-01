@@ -1,0 +1,391 @@
+{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+{% include "./global/global.html" %}
+
+<div class="index-contents">
+	<div class="advertisement-section row">
+		<!-- 블록마다 다른 배너가 올 수 있으므로, 링크 DB 저장 및 서버에서 구성해야함 -->
+		<div class="advertisement-item" style="background-image:url('https://a0.muscache.com/im/pictures/c32fc168-cb04-4746-a3c8-7473c1112d24.jpg')"></div>
+		<!-- 블록마다 다른 배너가 올 수 있으므로, 링크 DB 저장 및 서버에서 구성해야함 -->
+	</div>
+	<div class="main-section no-padding row">
+		<div class="title col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<span>파크하비오 새로운 이웃</span>
+			<woot-click href="/people">
+				<span class="more-button button">모두 보기</span>
+			</woot-click>
+		</div>
+		<div class="main-section-contents people-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<div class="people-wrapper-scroll">
+				<div class="main-section-item people-item button">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>비니</span>
+					</div>
+				</div>
+				<div class="main-section-item people-item button">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>찍찍이</span>
+					</div>
+				</div>
+				<div class="main-section-item people-item button">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>송파오벨</span>
+					</div>
+				</div>
+				<div class="main-section-item people-item button">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>민트</span>
+					</div>
+				</div>
+				<div class="main-section-item people-item button">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>멍구</span>
+					</div>
+				</div>
+				<div class="main-section-item people-item button">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>두둥</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main-section no-padding row">
+		<div class="main-section-divider col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<div class="divider"></div>
+		</div>
+		<div class="title col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<span>다가오는 게더링</span>
+			<woot-click href="/gathering">
+				<span class="more-button button">모두 보기</span>
+			</woot-click>
+		</div>
+		<div class="main-section-contents gathering-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<div class="gathering-wrapper-scroll">
+				<woot-click href="/gathering/detail?gid=1">
+				<div class="main-section-item gathering-item button">
+					<div class="background" style="background-image:url('https://i.pinimg.com/564x/11/d3/db/11d3dbc8d9c796332f643fca8886ad55.jpg')"></div>
+					<div class="description">
+						<div class="title">
+							<span>가볍게 맥주</span>
+							<span class="highlight">D-1</span>
+						</div>
+						<div class="date">
+							<span>8월 13일 PM 7:00</span>
+						</div>
+						<div class="place">
+							<span>송파오벨 앞</span>
+						</div>
+					</div>
+				</div>
+				</woot-click>
+				<woot-click href="/gathering/detail?gid=1">
+				<div class="main-section-item gathering-item button">
+					<div class="background" style="background-image:url('https://i.pinimg.com/564x/87/5b/9a/875b9a57c0670dfc5505be69dda9c6bf.jpg')"></div>
+					<div class="description">
+						<div class="title">
+							<span>피맥피맥</span>
+						</div>
+						<div class="date">
+							<span>8월 14일 PM 6:00</span>
+						</div>
+						<div class="place">
+							<span>송파 하남돼지집</span>
+						</div>
+					</div>
+				</div>
+				</woot-click>
+				<woot-click href="/gathering/detail?gid=1">
+				<div class="main-section-item gathering-item button">
+					<div class="background" style="background-image:url('https://i.pinimg.com/564x/a2/ee/8e/a2ee8ef87219bef3eef4cbda5fb99fd1.jpg')"></div>
+					<div class="description">
+						<div class="title">
+							<span>따릉이 산책</span>
+						</div>
+						<div class="date">
+							<span>8월 16일 PM 8:00</span>
+						</div>
+						<div class="place">
+							<span>잠실역</span>
+						</div>
+					</div>
+				</div>
+				</woot-click>
+				<woot-click href="/gathering/detail?gid=1">
+				<div class="main-section-item gathering-item button">
+					<div class="background" style="background-image:url('https://i.pinimg.com/236x/f3/a4/5c/f3a45c8d35e793717a78b2f7adaed577.jpg')"></div>
+					<div class="description">
+						<div class="title">
+							<span>힐링 호캉스</span>
+						</div>
+						<div class="date">
+							<span>8월 16일 PM 6:00</span>
+						</div>
+						<div class="place">
+							<span>파크하비오 레지던스</span>
+						</div>
+					</div>
+				</div>
+				</woot-click>
+				<woot-click href="/gathering/detail?gid=1">
+				<div class="main-section-item gathering-item button">
+					<div class="background" style="background-image:url('https://i.pinimg.com/236x/d0/da/f9/d0daf9d4536d301f80552b19add93f23.jpg')"></div>
+					<div class="description">
+						<div class="title">
+							<span>심야톡</span>
+						</div>
+						<div class="date">
+							<span>8월 17일 AM 0:00</span>
+						</div>
+						<div class="place">
+							<span>우트</span>
+						</div>
+					</div>
+				</div>
+				</woot-click>
+				<woot-click href="/gathering">
+				<div class="main-section-item gathering-item button">
+					<div class="background">
+						<span class="ion-ios-plus-empty"></span>
+					</div>
+					<div class="description">
+						<div class="title">
+							<span>게더링 더 살펴보기</span>
+						</div>
+						<div class="date">
+							<span>더 많은 게더링이</span>
+						</div>
+						<div class="place">
+							<span>예정되어 있습니다!</span>
+						</div>
+					</div>
+				</div>
+				</woot-click>
+			</div>
+		</div>
+	</div>
+	<div class="main-section row">
+		<div class="main-section-divider col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<div class="divider"></div>
+		</div>
+		<div class="title col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<span>파크하비오 화제의 글</span>
+			<woot-click href="/board">
+				<span class="more-button button">모두 보기</span>
+			</woot-click>
+		</div>
+		<div class="main-section-contents posting-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<div class="main-section-item posting-item posting-item-brief" id="posting-item-1">
+				<div class="posting-content">
+					<div class="description">
+						<p>우트에서 맞이한 생일에 웃님들에게 너무많은 감동을 받았습니다 뒤늦게나마 모두에게 정말로...
+						<woot-click href="/board/posting/detail?pid=1"><span class="more-button">더보기</span></woot-click></p>
+					</div>
+				</div>
+				<div class="posting-stat">
+					<woot-click href="/board/posting/detail/like?pid=1"><span class="like">좋아요 <span class="count">2</span>개</span></woot-click>
+					<woot-click href="/board/posting/detail?pid=1"><span class="comment">댓글 <span class="count">7</span>개</span></woot-click>
+				</div>
+				<div class="posting-header">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>비니</span>
+					</div>
+					<div class="date">
+						<span>7월 29일</span>
+					</div>
+				</div>
+			</div>
+			<!--
+			<div class="main-section-item posting-item" id="posting-item-2">
+				<div class="posting-header">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>멍구</span>
+					</div>
+					<div class="date">
+						<span>8월 11일</span>
+					</div>
+				</div>
+				<div class="posting-content">
+
+					<div class="swiper-container">
+						<div class="swiper-icon">
+							<span>2</span>
+						</div>
+					    <div class="swiper-wrapper">
+							<div class="swiper-slide image" style="background-image:url('http://hellowoot.co.kr/media/user_images/8195BDA1-C06D-4323-9F8C-020919C39130.jpg')"></div>
+							<div class="swiper-slide image" style="background-image:url('http://hellowoot.co.kr/media/user_images/20180728_124643.jpg')"></div>
+					    </div>
+					</div>
+
+					<div class="description">
+						<p>한강게더링,성공적 시원한 강바람 맞으면서 치맥(데낄라) 즐겼습니당🔥 동친 좋다는게 이런거죠!?😄</p>
+					</div>
+				</div>
+				<div class="posting-stat">
+					<woot-click href="/board/posting/detail/like?pid=2"><span class="like">좋아요 <span class="count">4</span>개</span></woot-click>
+					<woot-click href="/board/posting/detail?pid=2"><span class="comment">댓글 <span class="count">11</span>개</span></woot-click>
+				</div>
+				<div class="posting-footer">
+					<div class="button-like button" data-pid="2">
+						<span class="ion-ios-heart-outline"></span>
+					</div>
+					<woot-click href="/board/posting/detail?pid=2">
+						<div class="button-comment button">
+							<span class="ion-ios-chatbubble-outline"></span>
+						</div>
+					</woot-click>
+					<div class="button-misc button" onclick="pullupMenu('posting?pid=2')">
+						<span class="ion-ios-more-outline"></span>
+					</div>
+				</div>
+			</div>	
+			-->	
+			<div class="main-section-item posting-item posting-item-brief" id="posting-item-3">
+				<div class="posting-content">
+					<div class="description">
+						<p><span class="image-icon ion-image"></span>저번주 토요일 백숙게더링입니다~첨으로 서울 외곽으로 나가서 좋은 공기 맞으며 몸보신 제대로...
+						<woot-click href="/board/posting/detail?pid=3"><span class="more-button">더보기</span></woot-click></p>
+					</div>
+				</div>
+				<div class="posting-stat">
+					<woot-click href="/board/posting/detail/like?pid=3"><span class="like">좋아요 <span class="count">12</span>개</span></woot-click>
+					<woot-click href="/board/posting/detail?pid=3"><span class="comment">댓글 <span class="count">17</span>개</span></woot-click>
+				</div>
+				<div class="posting-header">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>아르미</span>
+					</div>
+					<div class="date">
+						<span>7월 25일</span>
+					</div>
+				</div>
+			</div>
+			<div class="main-section-item posting-item posting-item-brief" id="posting-item-4">
+				<div class="posting-content">
+					<div class="description">
+						<p><span class="image-icon ion-image"></span>정말 가족보다 이웃이라는 생각이 들 정도로 따뜻한 마음에 찐한 감동이 넘쳤습니다....
+						<woot-click href="/board/posting/detail?pid=4"><span class="more-button">더보기</span></woot-click>
+						</p>
+					</div>
+				</div>
+				<div class="posting-stat">
+					<woot-click href="/board/posting/detail/like?pid=4"><span class="like">좋아요 <span class="count">4</span>개</span></woot-click>
+					<woot-click href="/board/posting/detail?pid=4"><span class="comment">댓글 <span class="count">5</span>개</span></woot-click>
+				</div>
+				<div class="posting-header">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>뱅뱅뱅</span>
+					</div>
+					<div class="date">
+						<span>7월 18일</span>
+					</div>
+				</div>
+			</div>
+			<!--
+			<div class="main-section-item posting-item" id="posting-item-5">
+				<div class="posting-header">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>쿄다이엔</span>
+					</div>
+					<div class="date">
+						<span>스폰서</span>
+					</div>
+				</div>
+				<div class="posting-content">
+					<div class="image" style="background-image:url('http://thumbnail.egloos.net/600x0/http://pds27.egloos.com/pds/201502/03/15/d0013015_54d04c84424da.jpg')">
+						<div class="posting-sponser-button button">
+							<span>쿠폰 보기</span>
+						</div>
+					</div>
+					<div class="description">
+						<p>쿄다이엔 10% 할인 쿠폰🔥 (~9/30)</p>
+					</div>
+				</div>
+				<div class="posting-stat">
+					<woot-click href="/board/posting/detail/like?pid=5"><span class="like">좋아요 <span class="count">5</span>개</span></woot-click>
+					<woot-click href="/board/posting/detail?pid=5"><span class="comment">댓글 <span class="count">11</span>개</span></woot-click>
+				</div>
+				<div class="posting-footer">
+					<div class="button-like button" data-pid="5">
+						<span class="ion-ios-heart-outline"></span>
+					</div>
+					<woot-click href="/board/posting/detail?pid=5">
+						<div class="button-comment button">
+							<span class="ion-ios-chatbubble-outline"></span>
+						</div>
+					</woot-click>
+					<div class="button-misc button" onclick="pullupMenu('posting?pid=5')">
+						<span class="ion-ios-more-outline"></span>
+					</div>
+				</div>
+			</div>		
+			<div class="main-section-item posting-item" id="posting-item-6">
+				<div class="posting-header">
+					<div class="avatar">
+					</div>
+					<div class="username">
+						<span>아르미</span>
+					</div>
+					<div class="date">
+						<span>7월 25일</span>
+					</div>
+				</div>
+				<div class="posting-content">
+					<div class="image" style="background-image:url('http://hellowoot.co.kr/media/user_images/20180728_124643.jpg')">
+					</div>
+					<div class="description">
+						<p>저번주 토요일 백숙게더링입니다~첨으로 서울 외곽으로 나가서 좋은 공기 맞으며 몸보신 제대로 뿜뿜!했습니다~ 백숙.장어.매운탕.커피까지!다같이 가서 가격 부담도 없고 맛나는 음식도 많이 먹을수있어 이런 기회 오면 또 나갈 생각입니다ㅎ 아 좋다~!라고 생각하시는 이웃님들~ 편하게 오셔서 몸보신 같이해요 :)</p>
+					</div>
+				</div>
+				<div class="posting-stat">
+					<woot-click href="/board/posting/detail/like?pid=6"><span class="like">좋아요 <span class="count">1</span>개</span></woot-click>
+					<woot-click href="/board/posting/detail?pid=6"><span class="comment">댓글 <span class="count">1</span>개</span></woot-click>
+				</div>
+				<div class="posting-footer">
+					<div class="button-like button" data-pid="6">
+						<span class="ion-ios-heart-outline"></span>
+					</div>
+					<woot-click href="/board/posting/detail?pid=6">
+						<div class="button-comment button">
+							<span class="ion-ios-chatbubble-outline"></span>
+						</div>
+					</woot-click>
+					<div class="button-misc button" onclick="pullupMenu('posting?pid=6')">
+						<span class="ion-ios-more-outline"></span>
+					</div>
+				</div>
+			</div>
+			<div class="main-section-item posting-more-button">
+				<woot-click href="/board">
+					<div class="button">
+						<span>더 많은 소식 보기</span>
+					</div>
+				</woot-click>
+			</div>
+			-->
+		</div>
+	</div>
+</div>

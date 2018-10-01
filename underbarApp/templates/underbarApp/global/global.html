@@ -1,0 +1,8 @@
+{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+{% csrf_token %}
+
+<link href='http://10.80.138.123:8000{{STATIC_PREFIX}}css/serverStyle.css?v=20180829b' rel='stylesheet'>
+
+<input type='hidden' id='hiddenInput_userdata' value='{"login":true,"block":"파크하비오","uid":"1","uname":"멍구"}'/>

@@ -1,0 +1,37 @@
+{% include "../global/global.html" %}
+<div class="write-contents write-contents-edit row">
+	<div class="write-section col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<form id="write-posting-form" name="write-posting-form" method="post" enctype="multipart/form-data" action="">
+			<div class="write-section-item">
+				<input placeholder="게시판을 선택해주세요" value="소소한 일상" readonly/>
+				<input id="write-posting-input-board" name="board" type="hidden" value="1" readonly/>
+			</div>
+			<div id="write-section-addon"></div>
+			<div class="write-section-item">
+				<textarea id="write-posting-input-description" name="description" placeholder="내용을 입력해주세요">안녕하세요 이 글은 수정할때 뜨는 글입니다. 수정할때 여기에 해당 포스트의 내용을 넣어주시면 됩니다.
+				</textarea>
+			</div>
+			<div class="write-section-item write-section-item-photo">
+				<div id="write-section-item-photo-preview-wrapper">
+					<div id="write-section-item-photo-preview-1" class="write-section-item-photo-preview"></div>
+					<div id="write-section-item-photo-preview-2" class="write-section-item-photo-preview"></div>
+					<div id="write-section-item-photo-preview-3" class="write-section-item-photo-preview"></div>
+				</div>
+				<div class="write-section-item-photo-button button" id="write-section-item-photo-button">
+					<span class="ion-camera"></span>
+				</div>
+				<div id="write-posting-input-photo-wrapper">
+					<input type="file" accept="image/*" name="files[]" data-inputOrder="1"/>
+					<input type="file" accept="image/*" name="files[]" data-inputOrder="2"/>
+					<input type="file" accept="image/*" name="files[]" data-inputOrder="3"/>
+				</div>
+			</div>
+		</form>
+
+		<div class="write-section-item">
+			<div class="write-section-submit button" id="write-posting-submit">
+				<span>포스팅 수정하기</span>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+{% include "../global/global.html" %}
+
+<div class="signup-contents row">
+	<div class="signup-item-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="title">
+			<span>내가 속한 블록 검색</span>
+			<div class="button history-back"><i class="ion-android-close"></i></div>
+		</div>
+		<div class="description">
+			<span>블록은 내 거주지를 기준으로 1500명 정도의 사용자가 참여할 수 있는 커뮤니티 단위입니다.</span>
+		</div>
+		<div class="signup-item">
+			<div class="signup-item-input">
+				<input placeholder="주소지를 입력해주세요. (ex. 송파 법조타운)" id="signup-address-input"/>
+				<input id="signup-address-input-hidden" type="hidden"/>
+				<div class="signup-address-submit button" id="signup-address-submit">
+					<span>검색</span>
+				</div>
+			</div>
+		</div>
+		<div class="signup-item">
+			<div class="signup-address-result" id="signup-address-result"></div>
+		</div>
+	</div>
+	<div class="signup-button-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<a href="./login.signup.html">
+			<div class="signup-next-button button">다음</div>
+		</a>
+	</div>
+</div>

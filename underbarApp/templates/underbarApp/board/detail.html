@@ -1,0 +1,123 @@
+{% include "../global/global.html" %}
+
+<input type='hidden' id='hiddenInput_postdata' value='{"pid":"1"}'/>
+<input type='hidden' id='hiddenInput_boarddata' value='{"bid":"1","bname":"소소한일상"}'/>
+
+<div class="board-contents board-detail-contents row">
+	<div class="posting-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="posting-item" id="posting-item-1">
+			<div class="posting-header">
+				<div class="avatar">
+				</div>
+				<div class="username">
+					<span>멍구</span>
+				</div>
+				<div class="date">
+					<span>8월 11일</span>
+				</div>
+			</div>
+			<div class="posting-content">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide image" style="background-image:url('http://hellowoot.co.kr/media/user_images/8195BDA1-C06D-4323-9F8C-020919C39130.jpg')"></div>
+						<div class="swiper-slide image" style="background-image:url('http://hellowoot.co.kr/media/user_images/20180728_124643.jpg')"></div>
+					</div>
+    				<div class="swiper-pagination"></div>
+				</div>
+				<!-- 이미지가 하나만 있을 경우
+				<div class="image" style="background-image:url('http://hellowoot.co.kr/media/user_images/8195BDA1-C06D-4323-9F8C-020919C39130.jpg')">
+				</div>
+				-->
+				<div class="description">
+					<p>한강게더링,성공적 시원한 강바람 맞으면서 치맥(데낄라) 즐겼습니당🔥 동친 좋다는게 이런거죠!?😄</p>
+				</div>
+			</div>
+			<div class="posting-stat">
+				<woot-click href="/board/posting/detail/like?pid=1"><span class="like">좋아요 <span class="count">10</span>개</span></woot-click>
+				<span class="comment">댓글 <span class="count">14</span>개</span>
+			</div>
+			<div class="posting-footer">
+				<div class="button-like button" data-pid="1">
+					<span class="ion-ios-heart-outline"></span>
+				</div>
+				<div class="button-comment button">
+					<span class="ion-ios-chatbubble-outline"></span>
+				</div>
+				<div class="button-misc button" onclick="pullupMenu('posting?pid=1')">
+					<span class="ion-ios-more-outline"></span>
+				</div>
+			</div>
+		</div>	
+		<div class="posting-item posting-item-comment" id="posting-item-comment">
+			<div class="posting-comment" id="posting-comment-1">
+				<div class="avatar">
+				</div>
+				<div class="description">
+					<span class="nickname">멍구</span>
+					<span class="comment">안녕하세요. 친하게 지내요. 친구들아 Sing it</span>
+				</div>
+				<div class="meta">
+					<span class="date">8월 11일</span>
+					<span class="recomment-button button" data-cid="1">답글 달기</span>
+					<span class="comment-edit-button button" data-cid="1">수정하기</span>
+					<span class="comment-delete-button button" onclick="pullupMenu('comment.delete?cid=1')">삭제하기</span>
+				</div>
+			</div>
+			<div class="posting-comment" id="posting-comment-2">
+				<div class="avatar">
+				</div>
+				<div class="description">
+					<span class="nickname">멍구</span>
+					<span class="comment">안녕하세요. 친하게 지내요. 행복하자. 아프지 말고. 양화대교.</span>
+				</div>
+				<div class="meta">
+					<span class="date">8월 11일</span>
+					<span class="recomment-button button" data-cid="2">답글 달기</span>
+					<span class="comment-edit-button button" data-cid="2">수정하기</span>
+					<span class="comment-delete-button button" onclick="pullupMenu('comment.delete?cid=2')">삭제하기</span>
+				</div>
+			</div>
+			<div class="posting-comment posting-recomment" id="posting-comment-21">
+				<div class="avatar">
+				</div>
+				<div class="description">
+					<span class="nickname">마미손</span>
+					<span class="comment">폭염에 복면쓰고 불구덩이에 쳐박힌 내 기분을 니들이 알아?</span>
+				</div>
+				<div class="meta">
+					<span class="date">8월 11일</span>
+					<span class="comment-edit-button button" data-cid="21">수정하기</span>
+					<span class="comment-delete-button button" onclick="pullupMenu('comment.delete?cid=21')">삭제하기</span>
+				</div>
+			</div>
+			<div class="posting-comment" id="posting-comment-3">
+				<div class="avatar">
+				</div>
+				<div class="description">
+					<span class="nickname">멍구</span>
+					<span class="comment">안녕하세요. 친하게 지내요. 친구들아 Sing it</span>
+				</div>
+				<div class="meta">
+					<span class="date">8월 11일</span>
+					<span class="recomment-button button" data-cid="3">답글 달기</span>
+					<span class="comment-edit-button button" data-cid="3">수정하기</span>
+					<span class="comment-delete-button button" onclick="pullupMenu('comment.delete?cid=3')">삭제하기</span>
+				</div>
+			</div>
+			<div class="posting-comment" id="posting-comment-4">
+				<div class="avatar">
+				</div>
+				<div class="description">
+					<span class="nickname">멍구</span>
+					<span class="comment">안녕하세요. 친하게 지내요. 친구들아 Sing it</span>
+				</div>
+				<div class="meta">
+					<span class="date">8월 11일</span>
+					<span class="recomment-button button" data-cid="4">답글 달기</span>
+					<span class="comment-edit-button button" data-cid="4">수정하기</span>
+					<span class="comment-delete-button button" onclick="pullupMenu('comment.delete?cid=4')">삭제하기</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

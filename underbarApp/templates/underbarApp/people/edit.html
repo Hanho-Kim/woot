@@ -1,0 +1,79 @@
+{% include "../global/global.html" %}
+
+<div class="profile-contents profile-edit-contents row">
+	<div class="profile-section profile-section-avatar col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-avatar" style="background-image:url('http://hellowoot.co.kr/static/asset/images/profile_images/13-4.png');background-color:#fbc531">
+			<span class="icon button">변경</span>
+		</div>
+	</div>
+	<div class="profile-section profile-section-info col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="profile-info-name">칙칙</div>
+		<div class="profile-info-block">@ 파크하비오</div>
+	</div>
+	<div class="profile-section profile-section-edit col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="title">
+			<span>내 소개글</span>
+		</div>
+		<textarea id="profile-edit-input-description" placeholder="소개글을 작성해주세요">이건 슬픈 자기소개서 친구들아 sing it togather 난 핸들이 고장난 8 ton 트럭</textarea>
+		<div class="title">
+			<span>내 관심사</span>
+		</div>
+		<div id="profile-edit-input-interest-fake">
+			<span>축구</span>
+			<span>낮술</span>
+			<span>와인</span>
+			<span>독서</span>
+			<span>맛집</span>
+		</div>
+		<input type="hidden" id="profile-edit-input-interest" value='["축구","낮술","와인","독서","맛집"]'/>
+	</div>
+	<div class="profile-section profile-section-edit col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="title">
+			<span>개인정보</span>
+		</div>
+		<woot-click href="/people/profile/edit/password">
+			<div class="profile-edit-input-button button">
+				<span>비밀번호 변경</span>
+			</div>
+		</woot-click>
+		<div class="profile-edit-input-button button">
+			<span>로그아웃</span>
+		</div>
+	</div>
+	<div class="profile-section profile-section-edit col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="title">
+			<span>앱 설정</span>
+		</div>
+		<div class="profile-edit-input-toggle">
+			<span>푸시알림 받기</span>
+			<label class="switch">
+			  <input type="checkbox" id="write-gathering-input-instant" checked="true">
+			  <span class="slider"></span>
+			</label>			
+		</div>
+		<div class="profile-edit-input-button button">
+			<span>앱 업데이트</span>
+			<span class="version">version 1.0.0</span>
+		</div>
+	</div>
+	<div class="profile-section profile-section-edit col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="title">
+			<span>기타</span>
+		</div>
+		<a href="http://pf.kakao.com/_zkUnC">
+			<div class="profile-edit-input-button button">
+				<span>고객 지원</span>
+			</div>
+		</a>
+		<a href="https://www.signgate.com/statics/download/kica/spbioaccessterms_170427.pdf">
+			<div class="profile-edit-input-button button">
+				<span>개인정보 처리 방침</span>
+			</div>
+		</a>
+		<a href="https://www.signgate.com/statics/download/kica/spbioaccessterms_170427.pdf">
+			<div class="profile-edit-input-button button">
+				<span>이용약관</span>
+			</div>
+		</a>
+	</div>
+</div>
