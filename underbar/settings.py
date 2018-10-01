@@ -22,7 +22,7 @@ SECRET_KEY = 'd9pzn_n3=62*y14n+wk655q5@v24)zx6-2n(6t*=2sh&tv%8@0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.amazonaws.com',]
 
 
 TEMPLATES = [
