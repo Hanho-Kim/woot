@@ -1,6 +1,17 @@
 {% include "../global/global.html" %}
 
-<input type='hidden' id='hiddenInput_gatheringdata' value='{"gid":"1","gname":"가볍게 맥주한잔"}'/>
+<input type='hidden' id='hiddenInput_gatheringdata' value='{"gid":"1","gname":"가볍게 맥주한잔","expired":false}'/>
+
+{% if 1 == 0 %} <!-- If gathering time is over -->
+<div id="chat-room-alert">
+	<div class="chat-room-alert-message">
+		<span>지나간 게더링입니다. 후기를 남겨주세요.</span>
+	</div>
+	<div class="chat-room-alert-button">
+		<span>후기 (3)</span>
+	</div>
+</div>
+{% endif %}
 
 <div class="chat-room row" id="chat-room">
 	<div class="chat-item">

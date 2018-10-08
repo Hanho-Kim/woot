@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django import forms
 
 
+
 def index(request):
 	return render(request, 'underbarApp/index.html')
 
@@ -48,6 +49,10 @@ def apiv1(request):
 			# 푸터나 헤더 메뉴중 하이라이트 표시할 것 (새소식 등)
 			# ["home","gathering","write","board","people"] 형태로 return
 			return HttpResponse('["board","people"]')
+		elif(pathSplit[4] == "avatarChange"):
+			# 프로필 수정 페이지에서 아바타 체인지시 쓰이는거
+			# 랜덤하게 아바타 정보 보내주기
+			return HttpResponse('{"image":"http://hellowoot.co.kr/static/asset/images/profile_images/12-1.png","avatarID":"12"}')
 
 	if(pathSplit[3] == "post"):
 		if(pathSplit[4] == "like"):
@@ -94,17 +99,19 @@ def apiv1(request):
 
 		elif(pathSplit[4] == "profile"):
 			# 프로필 정보 수정
+			# avatar
             # description
             # interest
-            # pushnotification
-			return HttpResponse(1)
+            # push
+			return HttpResponse('{"redirect":"/index"}')
 
 		elif(pathSplit[4] == "password"):
-			# 비밀번호 변경
+			# 비밀번호 변경 (아래 내용 form으로 전달받음)
             # currentPW
             # newPW
             # newConfirmPW
-			return HttpResponse(1)
+            # Validate 한후 Redirect 
+			return HttpResponse('{"redirect":"/index"}')
 
 		elif(pathSplit[4] == "user"):
 
@@ -115,6 +122,11 @@ def apiv1(request):
 
 			elif(pathSplit[5] == "block"):
 				# 특정 유저 차단하기 
+				# request.POST.get("uid")
+				return HttpResponse(1)
+
+			elif(pathSplit[5] == "unblock"):
+				# 특정 유저 차단 해제하기
 				# request.POST.get("uid")
 				return HttpResponse(1)
 

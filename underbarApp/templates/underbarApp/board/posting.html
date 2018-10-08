@@ -22,23 +22,21 @@
 			</div>
 
 			<div class="posting-stat">
-				<woot-click href="/board/posting/detail/like?pid=1">
+				<div class="overlap-button-like" data-pid="1">
 					<span class="like">좋아요 <span class="count">2</span>개</span>
-				</woot-click>
-				<woot-click href="/board/posting/detail?pid=1&scrollToElm=posting-item-comment">
+				</div>
+				<div class="overlap-button-comment" data-pid="1">
 					<span class="comment">댓글 <span class="count">7</span>개</span>
-				</woot-click>
+				</div>
 			</div>
 
 			<div class="posting-footer">
 				<div class="button-like liked button" data-pid="1">
 					<span class="ion-ios-heart"></span>
 				</div>
-				<woot-click href="/board/posting/detail?pid=1&scrollToElm=posting-item-comment">
-					<div class="button-comment button">
-						<span class="ion-ios-chatbubble-outline"></span>
-					</div>
-				</woot-click>
+				<div class="button-comment button overlap-button-comment" data-pid="1">
+					<span class="ion-ios-chatbubble-outline"></span>
+				</div>
 				<div class="button-misc button" onclick="pullupMenu('posting?postid=1')">
 					<span class="ion-ios-more-outline"></span>
 				</div>
@@ -64,19 +62,21 @@
 			</div>
 
 			<div class="posting-stat">
-				<woot-click href="/board/posting/detail/like?pid=1"><span class="like">좋아요 <span class="count">10</span>개</span></woot-click>
-				<woot-click href="/board/posting/detail?pid=1&scrollToElm=posting-item-comment"><span class="comment">댓글 <span class="count">11</span>개</span></woot-click>
+				<div class="overlap-button-like" data-pid="2">
+					<span class="like">좋아요 <span class="count">10</span>개</span>
+				</div>
+				<div class="overlap-button-comment" data-pid="2">
+					<span class="comment">댓글 <span class="count">11</span>개</span>
+				</div>
 			</div>
 
 			<div class="posting-footer">
 				<div class="button-like button" data-pid="2">
 					<span class="ion-ios-heart-outline"></span>
 				</div>
-				<woot-click href="/board/posting/detail?pid=1&scrollToElm=posting-item-comment">
-					<div class="button-comment button">
-						<span class="ion-ios-chatbubble-outline"></span>
-					</div>
-				</woot-click>
+				<div class="button-comment button overlap-button-comment" data-pid="2">
+					<span class="ion-ios-chatbubble-outline"></span>
+				</div>
 				<div class="button-misc button" onclick="pullupMenu('posting?postid=1')">
 					<span class="ion-ios-more-outline"></span>
 				</div>

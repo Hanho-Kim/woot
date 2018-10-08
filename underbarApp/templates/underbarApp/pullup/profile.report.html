@@ -1,6 +1,19 @@
+{% if 1 == 0 %}
+
 <div class="pullup-item button profile-report-block">
 	<span>해당 이웃 차단하기</span>
 </div>
 <div class="pullup-item button profile-report-report">
 	<span>해당 이웃 차단하고 신고하기</span>
 </div>
+
+{% else %} <!-- 이미 해당 유저가 차단되어 있는 경우 -->
+
+<div class="pullup-item button profile-report-unblock">
+	<span>해당 이웃 차단 해제하기</span>
+</div>
+<div class="pullup-item button profile-report-report">
+	<span>해당 이웃 신고하기</span>
+</div>
+
+{% endif %}

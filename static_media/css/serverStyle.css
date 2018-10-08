@@ -81,116 +81,75 @@
 
 /* login */
 
-.login-contents{
+
+.intro-contents{
   position:relative;
   display:block;
   width:100vw;
   height:100vh;
-  background-color:
 }
-.login-contents .login-logo{
-  margin-top:23vh;
-  margin-bottom:5px;
-  padding-left:30px;
-}
-.login-contents .login-logo img{
-  width:40px;
-}
-.login-contents .login-message{
-  padding:10px 30px;
-  margin-bottom:5px;
-}
-.login-contents .login-message .title{
-  font-size:20px;
-  line-height:1.3em;
-  font-weight:400;
-}
-.login-contents .login-input{
+.intro-contents .swiper-container{
   position:relative;
   display:block;
-  padding:10px 30px;
+  width:100vw;
+  height:100vh;
 }
-.login-contents .login-input input{
-  position:relative;
-  width:100%;
-  padding:10px 5px;
-  margin-top:15px;
-  line-height:1.5em;
-  font-size:14px;
-  outline:none;
-  border:none;
-  border-bottom:1px solid rgb(210,210,210);
+.intro-contents .swiper-container .swiper-pagination-bullets{
+  margin-bottom:4px;
 }
-#login-input-address{
-  padding-right:55px;
+.intro-contents .swiper-container .swiper-pagination-bullet{
+  width:6px;
+  height:6px;
 }
-.login-input-address-button{
-  position:absolute;
-  right:30px;
-  top:29px;
-  padding:4px 15px;
-  font-size:22px;
+.intro-contents .swiper-container .swiper-pagination-bullet-active{
   background-color:#45aaf2;
-  border-radius:5px;
-  color:white;
 }
-
-.login-contents .login-button-wrapper{
-  position:absolute;
-  display:block;
-  text-align:center;
-  padding:0px 30px;
-  bottom:30px;
-}
-.login-contents .login-button-wrapper .login-button{
-  position:relative;
-  display:block;
-  width:100%;
-  margin-top:60px;
-  padding:18px;
-  text-align:center;
-  color:rgb(110,110,110);
-  background-color:rgb(230,230,230);
-  font-size:12px;
-  border-radius:5px;
-}
-
-#login-template-view{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:white;
-  z-index:9;
-  display:none;
+.intro-contents .intro-image{
+  background-size:cover;
+  background-position:center;
 }
 
 .signup-contents{
   position:relative;
   display:block;
-  width:100vw;
-  height:100vh;
 }
+
+
 .signup-item-wrapper{
   position:relative;
   display:block;
   margin-top:50px;
   padding:0px 30px;
+  overflow-y:hidden;
 }
 .signup-item-wrapper .title{
-  font-size:20px;
-  font-weight:400;
-  margin-bottom:60px;
+  font-size:22px;
+  font-weight:600;
+  margin-bottom:30px;
+  margin-top:30px;
   margin-left:5px;
   line-height:1.2em;
+  font-family:"roboto";
+  letter-spacing:2px;
+  color:rgb(90,90,90);
 }
 .signup-item-wrapper .title .button{
   float:right;
 }
+.signup-item-wrapper .separator{
+  position:relative;
+  height:2px;
+  background-color:rgb(110,110,110);
+  width:60px;
+  margin-left:5px;
+  margin-bottom:40px;
+}
 .signup-item-wrapper .signup-item{
   position:relative;
   display:block;
+}
+.signup-item-wrapper .signup-item-divider{
+  margin-top:40px;
 }
 .signup-item-wrapper .signup-item .message{
   position:relative;
@@ -209,12 +168,40 @@
   border:none;
   border-bottom:1px solid rgb(210,210,210);
 }
+.signup-item-wrapper .signup-item textarea{
+  position:relative;
+  width:100%;
+  padding:10px 5px 0px;
+  margin-top:15px;
+  line-height:1.25em;
+  font-size:13px;
+  outline:none;
+  border:none;
+  border-bottom:1px solid rgb(210,210,210);
+  resize:none;
+}
+.signup-item-wrapper .signup-item .signup-item-input-button{
+  position:absolute;
+  display:inline-block;
+  width:100px;
+  top:15px;
+  padding:12px 0px;
+  border-radius:5px;
+  text-align:center;
+  background-color:rgb(220,220,220);
+  font-size:12px;
+  margin-top:5px;
+}
+.signup-item-wrapper .signup-item .signup-item-input-phone-auth-wrapper{
+  position:relative;
+  padding-left:110px;
+}
 
 .signup-agree-wrapper{
   position:relative;
   display:block;
   padding:20px 30px;
-  margin-top:120px;
+  margin-top:80px;
   background-color:rgb(250,250,250);
 }
 .signup-agree-wrapper .signup-agree-item{
@@ -245,6 +232,7 @@
 .signup-contents .signup-button-wrapper{
   position:relative;
   margin-top:20px;
+  margin-bottom:40px;
   display:block;
   text-align:center;
   width:100%;
@@ -260,6 +248,7 @@
   font-weight:600;
   color:white;
   border-radius:5px;
+  font-size:13px;
 }
 .signup-contents .signup-button-wrapper .login-button{
   position:relative;
@@ -272,19 +261,21 @@
 }
 .signup-contents .description{
   padding:5px;
-  line-height:1.5em;
-  font-size:13px;
-  margin-bottom:20px;
+  line-height:1.75em;
+  font-size:14px;
+  margin-bottom:40px;
+  color:rgb(110,110,110);
 }
 
 .signup-address-submit{
   position:absolute;
   right:5px;
-  top:22px;
-  padding:5px 10px;
+  top:20px;
+  padding:8px 12px;
   font-size:12px;
-  border:1px solid rgb(160,160,160);
-  color:rgb(110,110,110);
+  background-color:rgb(210,210,210);
+  border-radius:3px;
+  color:rgb(38,38,38);
 }
 #signup-address-input{
   padding-right:60px;
@@ -327,6 +318,43 @@
   font-size:40px;
   margin-bottom:10px;
 }
+
+.signup-footer{
+  position:fixed;
+  bottom:0px;
+  width:100%;
+  display:block;
+  padding:25px;
+  font-weight:600;
+  font-size:16px;
+  background-color:white;
+}
+
+.signup-footer-item-previous{
+  position:relative;
+  display:inline-block;
+  color:rgb(210,210,210);
+}
+.signup-footer-item-count{
+  position:absolute;
+  width:80px;
+  text-align:center;
+  top:28px;
+  left:50%;
+  margin-left:-40px;
+  font-size:12px;
+}
+.signup-footer-item-forward{
+  position:relative;
+  display:inline-block;
+  float:right;
+  color:#45aaf2;
+}
+.signup-footer-item i{
+  margin-left:5px;
+  margin-right:5px;
+}
+
 /* End of login */
 
 
@@ -514,8 +542,11 @@
   font-size:13px;
   line-height:1.5em;
 }
+
+
+
 #posting-wrapper{
-  padding-bottom:80px;
+  padding-bottom:30px;
 }
 .posting-wrapper{
   position:relative;
@@ -606,6 +637,12 @@
   color:rgb(110,110,110);
   font-size:13px;
 }
+.posting-item .posting-stat .overlap-button-comment{
+  display:inline-block;
+}
+.posting-item .posting-stat .overlap-button-like{
+  display:inline-block;
+}
 
 .posting-item .posting-stat .like{
   margin-right:5px;
@@ -694,13 +731,19 @@
   margin-right:8px;
   color:rgb(110,110,110);
 }
+.posting-item-no-more{
+  text-align:center;
+  padding-top:80px;
+  color:rgb(110,110,110);
+  font-size:13px;
+}
 
 /* Board */
 
 .board-contents{
   position:relative;
   display:block;
-  padding:48px 5px 100px 5px;
+  padding:48px 5px 80px 5px;
 }
 
 .board-section{
@@ -838,6 +881,18 @@
 }
 .board-detail-contents .posting-item-comment{
   border-bottom:0px;
+}
+
+#posting-overlap-view{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  min-height:100%;
+  z-index:9999;
+  background-color:white;
+  overflow-y:auto;
+  display:none;
 }
 /* End of Board */
 
@@ -1117,6 +1172,30 @@
   font-size:12px;
   font-weight:600;
 }
+
+.gathering-review-contents{
+  padding-top:80px;
+  padding-bottom:80px;
+}
+.gathering-review-contents .posting-button{
+  position:relative;
+  display:block;
+  text-align:center;
+  padding:20px;
+  background-color:#f1f2f6;
+  border-radius:10px;
+  font-weight:600;
+  font-size:13px;
+}
+.gathering-review-contents .posting-content .image{
+  border-radius:10px;
+}
+.gathering-review-contents .posting-content .description{
+  background-color:#f1f2f6;
+  padding:10px;
+  border-radius:10px;
+  font-size:14px;
+}
 /* End of Gathering */
 
 /* Chat */
@@ -1217,6 +1296,32 @@
 .chat-item.chat-item-my .message .message-cloud p{
   background-color:#1e90ff;
   color:white;
+}
+
+#chat-room-alert{
+  position:fixed;
+  display:block;
+  top:84px;
+  z-index:99;
+  background-color:rgba(250,250,250,0.7);
+  width:100%;
+  padding:20px 15px;
+  font-size:13px;
+}
+.chat-room-alert-message{
+  position:relative;
+  display:block;
+}
+.chat-room-alert-button{
+  position:absolute;
+  padding:10px 20px;
+  right:15px;
+  top:10px;
+  background-color: #45aaf2;
+  color:#fff;
+  font-size:12px;
+  border-radius:5px;
+  text-align:center;
 }
 
 /* End of Chat */
