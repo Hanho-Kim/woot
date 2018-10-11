@@ -9,6 +9,11 @@ from django import forms
 def index(request):
 	return render(request, 'underbarApp/index.html')
 
+def update(request):
+	# 업데이트 체크. 클라이언트의 앱의 버전을 받아서 최신버전과 비교후 업데이트 해야할 필요가 있는지 판단함
+	# request.POST.get("currentVersion") --> 클라이언트의 앱 버전
+	return render(request, 'underbarApp/update.html')
+
 def login(request):
 	if(request.path == "/login"):
 		return render(request, 'underbarApp/login/login.html')

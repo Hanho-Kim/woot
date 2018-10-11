@@ -13,6 +13,7 @@ from underbar import settings
 urlpatterns = [
 	url('index', views.index, name='index'),
 	url('login', views.login, name='login'),
+	url('update', views.update, name='update'),
 	url(r'^login/', views.login, name='login'),
 	url(r'^notification/', views.notification, name='notification'),
 	url(r'^write/', views.write, name='write'),

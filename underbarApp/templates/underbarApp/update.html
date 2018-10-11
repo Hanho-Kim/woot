@@ -1,0 +1,17 @@
+{% if 1 == 0 %} <!-- update할 필요가 없을 경우에는 false를 전달해줘야함 -->
+
+<div class="title">
+	<span>새로운 버전으로 업데이트가 필요합니다.</span>
+</div>
+<div class="update-alert-button-wrapper">
+	<div class="button">
+		<span>업데이트</span>
+	</div>
+	{% if 1 == 1 %} <!-- 강제로 업데이트 해야하는 경우가 아닐때 -->
+	<div class="button">
+		<span>나중에</span>
+	</div>
+	{% endif %}
+</div>
+
+{% endif %}
