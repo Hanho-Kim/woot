@@ -384,24 +384,83 @@
   border-radius:5px;
 }
 
+.signup-confirm-form-wrapper{
+  position:fixed;
+  height:100%;
+  width:100%;
+  padding:30px 20px;
+  top:0vh;
+  left:0;
+  z-index:98;
+  display:none;
+}
+.signup-confirm-form-wrapper .background{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  z-index:98;
+  background-color:rgb(255,255,255);
+  opacity:0.8;
+}
+.signup-confirm-form-wrapper .contents{
+  position:relative;
+  z-index:99;
+  background-color:white;
+  width:94%;
+  margin-left:3%;
+  height:50%;
+  margin-top:40%;
+  padding:30px 20px;
+  border:1px solid rgb(210,210,210);
+  border-radius:10px;
+}
+.signup-confirm-form-wrapper .image{
+  position:relative;
+  width:180px;
+  height:120px;
+  left:50%;
+  margin-left:-90px;
+  background-position:center;
+  background-size:cover;
+}
+.signup-confirm-form-wrapper .description{
+  position:relative;
+  display:block;
+  margin-top:10px;
+  line-height:1.5em;
+}
+.signup-confirm-form-wrapper .upload-button{
+  position:relative;
+  display:block;
+  padding:15px;
+  background-color:#45aaf2;
+  color:white;
+  text-align:center;
+  margin-top:30px;
+  border-radius:5px;
+  font-size:13px;
+}
+
 .signup-footer-confirm{
   padding:10px !important;
 }
+
 .signup-confirm-button{
   position:relative;
   display:inline-block;
-  width:32%;
+  width:49%;
   float:left;
   background-color:#45aaf2;
   color:white;
   padding:20px 10px;
   border-radius:5px;
-  font-size:12px;
+  font-size:13px;
   text-align:center;
 }
 .signup-confirm-button:nth-child(2){
   margin-left:2%;
-  margin-right:2%;
 }
 .signup-confirm-button i{
   display:block;
@@ -1041,6 +1100,9 @@
   font-weight:400;
   color:rgb(180,180,180);
 }
+.gathering-discover-contents .gathering-item .description .title .status.active{
+  color:#45aaf2;
+}
 .gathering-discover-contents .gathering-item .description .date{
   position:relative;
   display:block;
@@ -1225,24 +1287,28 @@
   display:block;
   margin-top:8px;
 }
-.gathering-detail-contents .gathering-footer .button-half{
+.gathering-detail-contents .gathering-footer .button-like{
   position:relative;
   display:inline-block;
-  width:49%;
+  width:15%;
+  background-color:rgb(240,240,240);
+  color:rgb(180,180,180);
+  text-align:center;
+  padding:13px 0px;
+  border-radius:5px;
+  font-size:20px;
+  font-weight:600;
+}
+.gathering-detail-contents .gathering-footer .button-participate{
+  position:relative;
+  display:inline-block;
+  width:83%;
   background-color:rgb(240,240,240);
   color:rgb(110,110,110);
   text-align:center;
-  padding:15px 34px;
+  padding:16.5px 0px;
   border-radius:5px;
-  font-size:12px;
   font-weight:600;
-}
-.gathering-detail-contents .gathering-footer .button-half.selected{
-  background-color:rgb(220,220,220);
-  color:black;
-}
-.gathering-detail-contents .gathering-footer .button-half.selected i{
-  margin-right:3px;
 }
 .gathering-detail-contents .gathering-footer .button-like.selected i{
   color:#e74c3c;
@@ -1329,6 +1395,8 @@
   top:0px;
   left:15px;
   background-color:rgb(230,230,230);
+  background-size:cover;
+  background-position:center;
 }
 .chat-item .message{
   position:relative;
@@ -2111,14 +2179,51 @@
 .notification-item{
   position:relative;
   display:block;
-  padding-top:24px;
-  padding-bottom:24px;
+  padding-top:20px;
+  padding-bottom:20px;
   padding-left:5px;
   padding-right:5px;
   border-bottom:1px solid rgb(240,240,240);
 }
-.notification-item span{
+
+.notification-item .image{
+  position:absolute;
+  left:5;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background-size:cover;
+  background-position:center;
+  background-color:rgb(240,240,240);
+}
+.notification-item .description{
+  position:relative;
+  display:block;
+  padding-left:45px;
   line-height:1.5em;
 }
 
+.notification-item .description .date{
+  position:relative;
+  display:block;
+  color:rgb(140,140,140);
+  font-size:12px;
+}
+.notification-item .button-wrapper{
+  position:relative;
+  display:block;
+  margin-top:10px;
+  padding-left:40px;
+}
+.notification-item .button-wrapper .button{
+  position:relative;
+  display:inline-block;
+  padding:8px 0px;
+  width:48%;
+  text-align:center;
+  background-color:#45aaf2;
+  color:white;
+  border-radius:5px;
+  font-size:13px;
+}
 /* End of Notification */

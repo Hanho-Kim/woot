@@ -11,8 +11,11 @@ def index(request):
 
 def update(request):
 	# 업데이트 체크. 클라이언트의 앱의 버전을 받아서 최신버전과 비교후 업데이트 해야할 필요가 있는지 판단함
-	# request.POST.get("currentVersion") --> 클라이언트의 앱 버전
-	return render(request, 'underbarApp/update.html')
+	# request.GET.get("currentVersion") --> 클라이언트의 앱 버전
+	if(request.GET.get("currentVersion") < "1.0.0"): # 최신버전과 비교
+		return render(request, 'underbarApp/update.html')
+	else:
+		return HttpResponse("")
 
 def login(request):
 	if(request.path == "/login"):
@@ -44,16 +47,28 @@ def board(request):
 def apiv1(request):
 	pathSplit = request.path.split("/")
 	if(pathSplit[3] == "get"):
-		if(pathSplit[4] == "availableEmailCheck"): 
+		if(pathSplit[4] == "signupEmailCheck"): 
 			# 가입 가능한 이메일인지 체크하는거
 			if(request.GET.get('email') == "kim.hh91@gmail.com"):
 				return HttpResponse(0)
 			else:
 				return HttpResponse(1)
+		if(pathSplit[4] == "signupBlockCheck"): 
+			# 블록 유무 확인
+			# request.GET.get('address')로 주소 전송함. 판단해서 블록 유무 및 정보 알려줌
+			if(1 == 0):
+				return HttpResponse(0)
+			else:
+				return HttpResponse('{"bid":1,"bname":"법조타운B"}')
 		elif(pathSplit[4] == "highlight"):
 			# 푸터나 헤더 메뉴중 하이라이트 표시할 것 (새소식 등)
-			# ["home","gathering","write","board","people"] 형태로 return
-			return HttpResponse('["board","people"]')
+			# Footer의 경우 ["home","gathering","write","board","people"] 형태로 return
+			# Header의 경우 알림 개수 리턴. 없으면 0
+			return HttpResponse('{"footer":["board","people"],"header":1}')
+		elif(pathSplit[4] == "highlightHeaderDelete"):
+			# Header Highlight 지우기
+			# 유저가 알림창을 봤음
+			return HttpResponse(1)
 		elif(pathSplit[4] == "avatarChange"):
 			# 프로필 수정 페이지에서 아바타 체인지시 쓰이는거
 			# 랜덤하게 아바타 정보 보내주기
@@ -140,6 +155,24 @@ def apiv1(request):
 				# request.POST.get("uid")
 				return HttpResponse(1)
 
+		elif(pathSplit[4] == "signup"):
+
+			if(pathSplit[5] == "user"):
+				# 유저 정보를 받아 회원가입
+				# request.POST.get("address")
+				# request.POST.get("email")
+				# request.POST.get("password")
+				# request.POST.get("nickname")
+				# request.POST.get("intro")
+				# request.POST.get("interests") --> Array로 전달
+				# request.POST.get("phone")
+				return HttpResponse(1)
+
+			elif(pathSplit[5] == "address"):
+				# 유저 주소지 인증. 이미지 파일 전송
+				# request.POST.get("addressConfirmImage")
+				return HttpResponse(1)
+
 		elif(pathSplit[4] == "gatheringParticipate"):
 			# 게더링 참가
 			return HttpResponse(1)
@@ -166,5 +199,5 @@ def apiv1(request):
 				# 특정 유저한테 우트 취소하기
 				# request.POST.get("uid")
 				return HttpResponse(1)
-			
+
 
