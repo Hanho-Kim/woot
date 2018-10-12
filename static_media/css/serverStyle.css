@@ -340,6 +340,8 @@
   height:30px;
   width:30px;
   border-radius:30px;
+  background-size:cover;
+  background-position:center;
 }
 .signup-confirm-model-house .model-house-item .posting-header .username{
   position:relative;
@@ -724,6 +726,8 @@
   height:30px;
   width:30px;
   border-radius:30px;
+  background-size:cover;
+  background-position:center;
 }
 .posting-item .posting-header .username{
   position:relative;
