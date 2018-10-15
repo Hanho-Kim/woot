@@ -24,3 +24,5 @@ urlpatterns = [
 	url(r'^footer-input/', views.footerInput, name='footerInput'),
 	url(r'^api/v1/', views.apiv1, name='apiv1')
 ]
+
+urlpatterns += staticfiles_urlpatterns()
