@@ -3,6 +3,19 @@
 <div class="write-contents row">
 	<div class="write-section col-lg-24 col-md-24 col-sm-24 col-xs-24">
 		<div class="write-section-title">
+			<span>우트 게더링</span>
+			<label class="switch">
+				<input type="checkbox" id="write-gathering-input-woot-gathering">
+				<span class="slider"></span>
+			</label>
+		</div>
+		<div class="write-section-item write-section-item-woot-gathering">
+			<span class="icon ion-person-stalker"></span>
+			<input id="write-gathering-input-woot-invitation-fake" placeholder="게더링에 초대할 회원을 선택해주세요" value="" readonly/>
+			<input type="hidden" id="write-gathering-input-woot-invitation" value="[]"/>
+			<input type="hidden" id="write-gathering-input-woot-invitation-username" value="[]"/>
+		</div>
+		<div class="write-section-title">
 			<span>스티커</span>
 		</div>
 		<input type="hidden" id="write-gathering-input-sticker" value="1"/>
@@ -23,13 +36,13 @@
 			<input id="write-gathering-input-title" placeholder="게더링 이름을 입력해주세요"/>
 		</div>
 		<div class="write-section-item">
-			<span class="icon ion-ios-location"></span>
-			<input id="write-gathering-input-location" placeholder="게더링 장소를 정해주세요"/>
-		</div>
-		<div class="write-section-item">
 			<span class="icon ion-calendar"></span>
 			<input id="write-gathering-input-time-fake" placeholder="게더링 시간을 정해주세요" readonly/>
 			<input type="hidden" id="write-gathering-input-time"/>
+		</div>
+		<div class="write-section-item">
+			<span class="icon ion-ios-location"></span>
+			<input id="write-gathering-input-location" placeholder="게더링 장소를 정해주세요"/>
 		</div>
 		<div class="write-section-item">
 			<textarea id="write-gathering-input-description" placeholder="게더링을 간단하게 설명해주세요"></textarea>
@@ -47,18 +60,11 @@
 			<input id="write-gathering-input-agelimit-fake" placeholder="참가자의 나이 제한을 정해주세요" readonly/>
 		</div>
 
-		<div class="write-section-title">
-			<span>즉시 공개</span>
-			<label class="switch">
-			  <input type="checkbox" id="write-gathering-input-instant" checked="true">
-			  <span class="slider"></span>
-			</label>
-		</div>
-		<div class="write-section-item write-section-item-instant">
+		<div class="write-section-item">
 			<input id="write-gathering-input-mintime" placeholder="지금부터"/>
 			<span class="subtitle">시간 동안</span>
 		</div>
-		<div class="write-section-item write-section-item-instant">
+		<div class="write-section-item">
 			<input id="write-gathering-input-minpeople" placeholder="최소"/>
 			<span class="subtitle">명 이상 모집시</span>
 		</div>

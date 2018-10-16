@@ -1,5 +1,9 @@
-
-{% if request.GET.bid == "4" %} <!-- bid를 받아서 addon 할 거 만듬 -->
+<!-- bid를 받아서 addon 할 거 만듬 -->
+{% if request.GET.bid == "3" %} 
+<div class="write-section-item">
+	<input id="write-posting-input-nearby" placeholder="블록공개 / 주변공개"/>
+</div>
+{% elif request.GET.bid == "4" %}
 <div class="write-section-item">
 	<span class="icon ion-ios-location"></span>
 	<input id="write-posting-input-location" placeholder="추천 장소를 입력해주세요"/>

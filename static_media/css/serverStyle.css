@@ -693,6 +693,16 @@
   font-size:13px;
   line-height:1.5em;
 }
+.gathering-wrapper .gathering-item .status{
+  position:relative;
+  display:block;
+  color:rgb(110,110,110);
+  font-size:11px;
+  line-height:1.5em;
+}
+.gathering-wrapper .gathering-item .status.active{
+  color:#45aaf2;
+}
 
 
 
@@ -1280,11 +1290,10 @@
 .gathering-detail-contents .details{
   position:relative;
   display:block;
-  margin-top:15px;
-  padding-top:20px;
-  border-top:1px solid rgb(230,230,230);
+  padding-top:5px;
   line-height:1.5em;
   font-size:14px;
+  border:none;
 }
 .gathering-detail-contents .gathering-footer{
   position:relative;
@@ -1332,10 +1341,41 @@
   font-size:12px;
   font-weight:600;
 }
+.gathering-detail-tab-wrapper{
+  position:relative;
+  display:block;
+  margin-top:5px;
+  border-bottom:1px solid rgb(230,230,230);
+}
+.gathering-detail-tab{
+  position:relative;
+  text-align:center;
+  padding:12px 0px 12px 0px;
+  margin-bottom:-1px;
+}
+.gathering-detail-tab .number{
+  color:rgb(140,140,140);
+  display:block;
+}
+.gathering-detail-tab .title{
+  font-size:12px;
+  margin-top:5px;
+  color:rgb(140,140,140);
+  display:block;
+}
+.gathering-detail-tab.selected{
+  border-bottom:2px solid #45aaf2;
+  color:#45aaf2;
+}
+.gathering-detail-tab.selected .title{
+  color:#45aaf2;
+}
+.gathering-detail-tab.selected .number{
+  color:#45aaf2;
+}
 
-.gathering-review-contents{
-  padding-top:80px;
-  padding-bottom:80px;
+.gathering-review-contents .posting-wrapper{
+  padding:0px;
 }
 .gathering-review-contents .posting-button{
   position:relative;
@@ -1356,8 +1396,22 @@
   border-radius:10px;
   font-size:14px;
 }
-.write-contents-gathering-review textarea{
-  border-top:1px solid rgb(210,210,210) !important;
+#gathering-details-view .description{
+  margin-bottom:3px;
+}
+
+#gathering-details-view textarea{
+  position:relative;
+  width:100%;
+  padding:10px;
+  line-height:1.5em;
+  font-size:14px;
+  margin-top:0px;
+  border-radius:5px;
+  height:60px;
+  outline:none;
+  border:1px solid rgb(230,230,230);
+  resize:none;
 }
 /* End of Gathering */
 
@@ -1379,6 +1433,9 @@
   display:inline-block;
 }
 .chat-header-detail .date{
+  margin-left:5px;
+}
+.chat-header-detail .date, .chat-header-detail .place{
   margin-right:15px;
 }
 .chat-header-detail .date i, .chat-header-detail .place i{
@@ -1532,7 +1589,7 @@
   background-color:white;
   z-index:100;
 }
-.write-section-item-instant{
+.write-section-item-woot-gathering{
   display:none;
 }
 .write-section-item-gathering-sticker{
@@ -1618,6 +1675,9 @@
   top:20px;
   font-size:12px;
   color:rgb(140,140,140);
+}
+#write-gathering-input-woot-invitation-fake{
+  padding-left:30px;
 }
 #write-gathering-input-location{
   padding-left:30px;
@@ -1710,6 +1770,43 @@
 }
 #write-posting-input-location{
   padding-left:30px;
+}
+
+.pullup-gathering-invitation{
+  position:relative;
+  height:300px;
+  overflow-y:scroll;
+  padding:10px 20px;
+}
+
+.pullup-gathering-invitation .people-item{
+  padding-top:10px;
+}
+.pullup-gathering-invitation .people-item .avatar{
+  width:35px;
+  height:35px;
+}
+
+.pullup-gathering-invitation .people-item .description{
+  padding-top:10px;
+  padding-bottom:5px;
+  padding-left:48px;
+}
+
+.pullup-gathering-invitation .people-item .checkbox{
+  position:absolute;
+  right:5px;
+  top:8px;
+  padding:3px 4.5px;
+  border:1px solid rgb(210,210,210);
+  font-size:12px;
+  color:white;
+  text-align:center;
+  border-radius:50%;
+}
+.pullup-gathering-invitation .people-item .checkbox.checked{
+  background-color:#45aaf2;
+  border:1px solid #45aaf2;
 }
 
 .pullup-agelimit{
@@ -1912,17 +2009,23 @@
   position:relative;
   display:block;
   float:right;
-  margin-top:15px;
+  margin-top:10px;
 }
 .profile-button-wrapper .profile-button{
   display:inline-block;
-  padding:10px 14px;
+  padding:5px 14px;
   color:rgb(160,160,160);
   background-color:rgb(240,240,240);
   border-radius:5px;
   text-align:center;
   font-size:24px;
   margin-left:5px;
+}
+.profile-button-wrapper .profile-button span{
+  font-size:12px;
+  line-height:1.25em;
+  text-align:center;
+  display:block;
 }
 .profile-button-wrapper .profile-button-like.liked{
   color:#e74c3c;
@@ -1997,6 +2100,42 @@
 .profile-section-statistics-tab.selected .number{
   color:#45aaf2;
 }
+
+#profile-section-history .badge-discover-contents{
+  padding:10px 0px;
+}
+
+#profile-section-history .badge-item{
+  position:relative;
+  display:block;
+  padding-top:15px;
+  padding-bottom:10px;
+  padding-left:0px;
+  border-bottom:1px solid rgb(240,240,240);
+}
+
+#profile-section-history .badge-item .badge-image{
+  position:absolute;
+  left:0;
+  top:10;
+  width:40px;
+  height:40px;
+  border-radius:8px;
+  background-color:rgb(240,240,240);
+  background-size:100%;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+#profile-section-history .badge-item .description{
+  position:relative;
+  display:block;
+  padding:15px 0px;
+  padding-left:52px;
+  font-size:13px;
+  font-weight:600;
+}
+
 #profile-section-history{
   padding:0px 15px;
 }
@@ -2007,7 +2146,7 @@
   margin-top:10px;
 }
 #profile-section-history .people-contents .people-item .description .username{
-  padding:10px 5px;
+  padding:13px 0px;
 }
 #profile-section-history .gathering-discover-contents{
   padding:5px 0px;
