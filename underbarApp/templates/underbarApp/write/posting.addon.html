@@ -1,7 +1,16 @@
 <!-- bid를 받아서 addon 할 거 만듬 -->
 {% if request.GET.bid == "3" %} 
-<div class="write-section-item">
-	<input id="write-posting-input-nearby" placeholder="블록공개 / 주변공개"/>
+<div class="write-section-item write-section-item-radio">
+	<div class="write-section-item-radio-wrapper">
+		<label class="radio-container">내 블록 공개
+			<input type="radio" checked="checked" name="radio">
+			<span class="checkmark"></span>
+		</label>
+		<label class="radio-container">주변 블록 공개
+			<input type="radio" name="radio">
+			<span class="checkmark"></span>
+		</label>
+	</div>
 </div>
 {% elif request.GET.bid == "4" %}
 <div class="write-section-item">

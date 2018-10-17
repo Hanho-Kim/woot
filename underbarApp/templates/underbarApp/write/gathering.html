@@ -3,18 +3,21 @@
 <div class="write-contents row">
 	<div class="write-section col-lg-24 col-md-24 col-sm-24 col-xs-24">
 		<div class="write-section-title">
-			<span>우트 게더링</span>
-			<label class="switch">
-				<input type="checkbox" id="write-gathering-input-woot-gathering">
-				<span class="slider"></span>
-			</label>
+			<span>공개범위</span>
 		</div>
-		<div class="write-section-item write-section-item-woot-gathering">
-			<span class="icon ion-person-stalker"></span>
-			<input id="write-gathering-input-woot-invitation-fake" placeholder="게더링에 초대할 회원을 선택해주세요" value="" readonly/>
-			<input type="hidden" id="write-gathering-input-woot-invitation" value="[]"/>
-			<input type="hidden" id="write-gathering-input-woot-invitation-username" value="[]"/>
-		</div>
+		<div class="write-section-item write-section-item-radio">
+			<div class="write-section-item-radio-wrapper">
+				<label class="radio-container">전체공개
+				  <input type="radio" checked="checked" name="radio">
+				  <span class="checkmark"></span>
+				</label>
+				<label class="radio-container">우트에게만 공개
+				  <input type="radio" name="radio">
+				  <span class="checkmark"></span>
+				</label>
+			</div>
+		</div>		
+
 		<div class="write-section-title">
 			<span>스티커</span>
 		</div>
