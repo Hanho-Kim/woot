@@ -1,3 +1,15 @@
+/* Debug */
+
+.debug-contents{
+  padding-top:50px;
+}
+.debug-item{
+  margin-bottom:20px;
+}
+
+/* End of Debug */
+
+
 /* Global */
 .swiper-icon{
   position:absolute;
@@ -2379,3 +2391,64 @@
   font-size:13px;
 }
 /* End of Notification */
+
+/* Message */
+
+.message-search{
+  margin-top:12px;
+}
+.message-search input{
+  position:relative;
+  width:100%;
+  padding:13px 10px;
+  padding-right:40px;
+  text-align:left;
+  line-height:1em;
+  font-size:13px;
+  outline:none;
+  border:none;
+  border-bottom:1px solid rgb(190,190,190);
+}
+.message-search .message-search-button{
+  position:absolute;
+  right:15px;
+  top:0px;
+  font-size:18px;
+  padding:9px 13px;
+  color:rgb(110,110,110);
+}
+.message-contents .people-section{
+  margin-top:15px;
+}
+
+.message-contents .people-item .message-truncate{
+  font-size:12px;
+  line-height:1.5em;
+  margin-top:3px;
+  color:rgb(110,110,110);
+}
+.message-contents .people-item .username.without-message{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.message-contents .people-item .message-highlight{
+  position:absolute;
+  right:3px;
+  top:28px;
+  padding:4px 6px;
+  font-size:10px;
+  background-color:#e74c3c;
+  color:white;
+  border-radius:10px;
+}
+.message-people-item-no{
+  text-align:center;
+  padding-top:15px;
+  padding-bottom:15px;
+  font-size:13px;
+  border:none;
+}
+#chat-room.message-chat-room{
+  padding-top:50px;
+}
+/* End of Message */

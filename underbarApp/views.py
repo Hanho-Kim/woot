@@ -17,11 +17,20 @@ def update(request):
 	else:
 		return HttpResponse("")
 
+def debug(request):
+	return render(request, 'underbarApp/debug.html')
+
 def login(request):
 	if(request.path == "/login"):
 		return render(request, 'underbarApp/login/login.html')
 	else:
 		return render(request, 'underbarApp/login/' + request.path.split("/")[2] + '.html')
+
+def message(request):
+	if(request.path == "/message"):
+		return render(request, 'underbarApp/message/discover.html')
+	else:
+		return render(request, 'underbarApp/message/' + request.path.split("/")[2] + '.html')
 
 def write(request):
 	return render(request, 'underbarApp/write/' + request.path.split("/")[2] + '.html')
