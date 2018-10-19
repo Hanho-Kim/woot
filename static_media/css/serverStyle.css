@@ -1064,7 +1064,7 @@
   left:100%;
   width:100%;
   min-height:100%;
-  z-index:9999;
+  z-index:9996;
   background-color:white;
   overflow-y:auto;
   display:none;
@@ -2418,7 +2418,7 @@
   color:rgb(110,110,110);
 }
 .message-contents .people-section{
-  margin-top:15px;
+  margin-top:0px;
 }
 
 .message-contents .people-item .message-truncate{
@@ -2427,24 +2427,45 @@
   margin-top:3px;
   color:rgb(110,110,110);
 }
-.message-contents .people-item .username.without-message{
+.message-contents .people-item.without-message .username{
   padding-top:10px;
   padding-bottom:10px;
 }
 .message-contents .people-item .message-highlight{
   position:absolute;
-  right:3px;
-  top:28px;
+  right:-5px;
+  top:10px;
   padding:4px 6px;
   font-size:10px;
   background-color:#e74c3c;
   color:white;
   border-radius:10px;
 }
+
+.message-people-item .category{
+  padding-bottom:15px;
+  margin-top:15px;
+  padding-left:2px;
+  font-size:12px;
+  font-weight:600;
+}
+.with-message .category{
+  display:none;
+}
+.without-message .category{
+  display:none;
+}
+.with-message:nth-child(1) .category{
+  display:block;
+}
+.without-message:nth-child(1) .category{
+  display:block;
+}
+
 .message-people-item-no{
   text-align:center;
-  padding-top:15px;
-  padding-bottom:15px;
+  padding-top:25px;
+  padding-bottom:25px;
   font-size:13px;
   border:none;
 }
