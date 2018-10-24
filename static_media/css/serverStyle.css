@@ -2199,7 +2199,7 @@
   padding:5px 0px;
 }
 
-.profile-edit-contents .profile-section-avatar{
+.profile-edit-contents .profile-section-avatar .profile-avatar{
   left:50%;
   margin-left:-55px;
 }
