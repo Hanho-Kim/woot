@@ -62,7 +62,7 @@ def apiv1(request):
 				return HttpResponse(0)
 			else:
 				return HttpResponse(1)
-		if(pathSplit[4] == "signupBlockCheck"): 
+		elif(pathSplit[4] == "signupBlockCheck"): 
 			# 블록 유무 확인
 			# request.GET.get('address')로 주소 전송함. 판단해서 블록 유무 및 정보 알려줌
 			if(1 == 0):
@@ -82,6 +82,11 @@ def apiv1(request):
 			# 프로필 수정 페이지에서 아바타 체인지시 쓰이는거
 			# 랜덤하게 아바타 정보 보내주기
 			return HttpResponse('{"image":"http://hellowoot.co.kr/static/asset/images/profile_images/12-1.png","avatarID":"12"}')
+		
+		elif(pathSplit[4] == "chatInfo"):
+			# 채팅 정보를 전달해줌
+			# 해당 채팅방에 대한 정보 + 현재 세션 유저 정보 + 현재 세션 유저가 들어갈수 없는 채팅이라면 그 여부 + 채팅방 닫혔는지 여부
+			return HttpResponse('{"room":{"title":"가볍게 맥주한잔","firebaseID":"/gathering/3","expired":"false"},"user":{"username":"칙칙","avatarUrl":"http://hellowoot.co.kr/static/asset/images/profile_images/12-1.png","avatarColor":"#2bcbba"}}')
 
 	if(pathSplit[3] == "post"):
 		if(pathSplit[4] == "like"):
