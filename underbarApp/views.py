@@ -3,6 +3,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django import forms
+import json
 
 
 
@@ -86,7 +87,35 @@ def apiv1(request):
 		elif(pathSplit[4] == "chatInfo"):
 			# 채팅 정보를 전달해줌
 			# 해당 채팅방에 대한 정보 + 현재 세션 유저 정보 + 현재 세션 유저가 들어갈수 없는 채팅이라면 그 여부 + 채팅방 닫혔는지 여부
-			return HttpResponse('{"room":{"title":"가볍게 맥주한잔","firebaseID":"/gathering/3","expired":"false"},"user":{"username":"칙칙","avatarUrl":"http://hellowoot.co.kr/static/asset/images/profile_images/12-1.png","avatarColor":"#2bcbba"}}')
+			chatInfo = {
+					"room" 		: {
+							"type"			: "gathering",
+							"id"			: "5",
+							"title"			: "가볍게 맥주한잔",
+							"sticker"		: "http://ec2-18-224-96-147.us-east-2.compute.amazonaws.com:8000/site_media/static/sticker1.jpeg",
+							"date"			: "10월 16일 오후 06:00",
+							"place"			: "파크하비오앞",
+							"description"	: "출출해 질 오후, 석촌 오모가리 김치찌개를 먹고 한강으로 이동, 해 질녁부터 한강에서 맥주 마시면서 보드게임해요! 늦잠 푹~ 주무시구 오후에 느즈막이 만화방가서 서로 수다떨고 만화책읽어요! <br><br>(그냥 읽고 싶은 책 가지고 오셔두 됩니다) 3시쯤 시작해서 떠들고 머리쓰다 보면 금방 배가 고파질테니 저녁 식사 같이하러 가요~ 메뉴는 오시는 분들과 함께 정해봐요 :) <br><br>처음 오시는 분들 걱정하지 마시구 어서오세요~ 30분만 같이 있으면 그 걱정 한번에 날려드릴게요ㅎㅎ",
+							"participants"	: {
+									"username" 	: [],
+									"uid"		: [],
+									"avatar"	: []
+							},
+							"disable"		: "false"
+						},
+					"user" 		: {
+							"uid"			: 2,
+							"username"		: "칙칙",
+							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/1-3.png",
+							"avatarColor"	: "#f1c40f"
+						},
+					"firebase"	: {
+							"instancePath"	: "/messages/gathering/5/",
+							"authEmail"		: "kimhh91@gmail.com",
+							"authKey"		: "debf48f5898c176db7ca9bdf1ec13303"
+						}
+				}
+			return HttpResponse(json.dumps(chatInfo))
 
 	if(pathSplit[3] == "post"):
 		if(pathSplit[4] == "like"):
