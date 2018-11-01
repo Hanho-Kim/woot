@@ -90,7 +90,7 @@ def apiv1(request):
 			chatInfo = {
 					"room" 		: {
 							"type"			: "gathering",
-							"id"			: "5",
+							"id"			: "6",
 							"title"			: "가볍게 맥주한잔",
 							"sticker"		: "http://ec2-18-224-96-147.us-east-2.compute.amazonaws.com:8000/site_media/static/sticker1.jpeg",
 							"date"			: "10월 16일 오후 06:00",
@@ -104,13 +104,13 @@ def apiv1(request):
 							"disable"		: "false"
 						},
 					"user" 		: {
-							"uid"			: 44,
+							"uid"			: 5,
 							"username"		: "초코",
-							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/6-3.png",
+							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/10-3.png",
 							"avatarColor"	: "#d1d8e0"
 						},
 					"firebase"	: {
-							"instancePath"	: "/messages/gathering/5/",
+							"instancePath"	: "/messages/gathering/6/",
 							"authEmail"		: "kimhh91@gmail.com",
 							"authKey"		: "debf48f5898c176db7ca9bdf1ec13303"
 						}
