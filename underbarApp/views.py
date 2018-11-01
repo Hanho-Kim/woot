@@ -104,10 +104,10 @@ def apiv1(request):
 							"disable"		: "false"
 						},
 					"user" 		: {
-							"uid"			: 2,
-							"username"		: "칙칙",
-							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/1-3.png",
-							"avatarColor"	: "#f1c40f"
+							"uid"			: 44,
+							"username"		: "초코",
+							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/6-3.png",
+							"avatarColor"	: "#d1d8e0"
 						},
 					"firebase"	: {
 							"instancePath"	: "/messages/gathering/5/",
