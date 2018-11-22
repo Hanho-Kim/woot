@@ -102,7 +102,7 @@ def apiv1(request):
 									"uid"		: [],
 									"avatar"	: []
 							},
-							"disable"		: "false"
+							"disable"		: "true"
 						},
 					"user" 		: {
 							"uid"			: 3,

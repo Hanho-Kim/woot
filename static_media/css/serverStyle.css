@@ -603,13 +603,27 @@
 .index-contents .banner-section{
   position:relative;
   display:block;
-  margin-bottom:30px;
+  margin-bottom:10px;
 }
 .index-contents .banner-section .banner-item{
   width:100%;
   height:200px;
   background-size:cover;
   background-position:center;
+}
+.index-contents .banner-section .swiper-container{
+  padding-bottom:20px;
+}
+.index-contents .banner-section .swiper-pagination{
+  bottom:0px;
+}
+.index-contents .banner-section .swiper-pagination .swiper-pagination-bullet{
+  width:6px;
+  height:6px;
+  margin:0px 3px;
+}
+.index-contents .banner-section .swiper-pagination .swiper-pagination-bullet-active{
+  background-color:#45aaf2;
 }
 .index-contents .main-section{
   position:relative;
@@ -2215,7 +2229,7 @@
 }
 
 .like-people-contents{
-  padding-top:30px;
+  padding-top:50px;
 }
 .like-people-contents .people-item .description .username{
   padding:10px 5px;
