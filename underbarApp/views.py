@@ -87,7 +87,8 @@ def apiv1(request):
 		elif(pathSplit[4] == "chatInfo"):
 			# 채팅 정보를 전달해줌
 			# 해당 채팅방에 대한 정보 + 현재 세션 유저 정보 + 현재 세션 유저가 들어갈수 없는 채팅이라면 그 여부 + 채팅방 닫혔는지 여부
-			chatInfo = {
+
+			gatheringExampleChatInfo = {
 					"room" 		: {
 							"type"			: "gathering",
 							"id"			: "5",
@@ -104,9 +105,9 @@ def apiv1(request):
 							"disable"		: "false"
 						},
 					"user" 		: {
-							"uid"			: 1,
-							"username"		: "멍구",
-							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/5-1.png",
+							"uid"			: 3,
+							"username"		: "칙칙",
+							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/3-1.png",
 							"avatarColor"	: "#26de81"
 						},
 					"firebase"	: {
@@ -115,7 +116,36 @@ def apiv1(request):
 							"authKey"		: "debf48f5898c176db7ca9bdf1ec13303"
 						}
 				}
-			return HttpResponse(json.dumps(chatInfo))
+
+			directExampleChatInfo = {
+					"room" 		: {
+							"type"			: "direct",
+							"id"			: "8",
+							"title"			: "쩡이",
+							"participants"	: {
+									"username" 	: ["멍구","쩡이"],
+									"uid"		: ["1","13"],
+									"avatar"	: ["http://hellowoot.co.kr/static/asset/images/profile_images/7-1.png","http://hellowoot.co.kr/static/asset/images/profile_images/3-1.png"]
+							},
+							"disable"		: "false"
+						},
+					"user" 		: {
+							"uid"			: 1,
+							"username"		: "멍구",
+							"avatarUrl"		: "http://hellowoot.co.kr/static/asset/images/profile_images/3-1.png",
+							"avatarColor"	: "#26de81"
+						},
+					"firebase"	: {
+							"instancePath"	: "/messages/direct/1/",
+							"authEmail"		: "kimhh91@gmail.com",
+							"authKey"		: "debf48f5898c176db7ca9bdf1ec13303"
+						}
+				}
+
+			if(request.GET.get('cid') == '1'):
+				return HttpResponse(json.dumps(gatheringExampleChatInfo))
+			else:
+				return HttpResponse(json.dumps(directExampleChatInfo))
 
 	if(pathSplit[3] == "post"):
 		if(pathSplit[4] == "like"):
