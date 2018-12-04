@@ -3,7 +3,7 @@
 <input type='hidden' id='hiddenInput_currentpagedata' value='{"page":"/people/profile","uid":"2","uname":"칙칙"}'/>
 
 
-{% if 1 == 0 %} <!-- if this profile is mine -->
+{% if 1 == 1 %} <!-- if this profile is mine -->
 <div class="profile-contents row">
 	<div class="profile-section profile-section-avatar col-lg-24 col-md-24 col-sm-24 col-xs-24">
 		<div class="profile-avatar" style="background-image:url('http://hellowoot.co.kr/static/asset/images/profile_images/13-4.png');background-color:#fbc531"></div>
@@ -27,6 +27,30 @@
 			<span>와인</span>
 			<span>자전거</span>
 		</div>
+	</div>
+	<div class="profile-section profile-section-info-2 col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		{% if 1 == 0 %}
+		<div class="profile-section-info-2-disable">
+			<div class="message">
+				<span>상세한 프로필은 이중 인증을 해주셔야 보입니다.</span>
+			</div>
+		</div>
+		{% else %}
+		<table class="profile-section-info-2-table">
+			<tr>
+				<td>관심사</td>
+				<td>상세한 관심사가 들어가는 공간입니다.</td>
+			</tr>
+			<tr>
+				<td>동네에서</td>
+				<td>동네에서 하고싶은 일이 들어가는 공간입니다.</td>
+			</tr>
+			<tr>
+				<td>직업</td>
+				<td>직업에 대한 상세한 설명이 들어가는 공간입니다.</td>
+			</tr>
+		</table>
+		{% endif %}
 	</div>
 	<div class="profile-section profile-section-statistics col-lg-24 col-md-24 col-sm-24 col-xs-24">
 		<div class="profile-section-statistics-item row">
@@ -86,6 +110,30 @@
 			<span>와인</span>
 			<span>자전거</span>
 		</div>
+	</div>
+	<div class="profile-section profile-section-info-2 col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		{% if 1 == 0 %}
+		<div class="profile-section-info-2-disable">
+			<div class="message">
+				<span>상세한 프로필은 이중 인증을 해주셔야 보입니다.</span>
+			</div>
+		</div>
+		{% else %}
+		<table class="profile-section-info-2-table">
+			<tr>
+				<td>관심사</td>
+				<td>상세한 관심사가 들어가는 공간입니다.</td>
+			</tr>
+			<tr>
+				<td>동네에서</td>
+				<td>동네에서 하고싶은 일이 들어가는 공간입니다.</td>
+			</tr>
+			<tr>
+				<td>직업</td>
+				<td>직업에 대한 상세한 설명이 들어가는 공간입니다.</td>
+			</tr>
+		</table>
+		{% endif %}
 	</div>
 	<div class="profile-section profile-section-statistics col-lg-24 col-md-24 col-sm-24 col-xs-24">
 		<div class="profile-section-statistics-item row">

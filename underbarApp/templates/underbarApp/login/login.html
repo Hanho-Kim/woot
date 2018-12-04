@@ -1,0 +1,25 @@
+{% include "../global/global.html" %}
+
+<input type='hidden' id='hiddenInput_userdata' value='{"login":false}'/>
+
+<div class="login-contents row">
+	<div class="cover" style="background-image:url('https://serving.photos.photobox.com/32349672eac7e28ee4d47efd024cfd084ad0c9b6af5743b11832b0d0179380ad1e5ad333.jpg');"></div>
+	<div class="login-message col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<div class="title">
+			<span>2030을 위한 미래형 이웃 커뮤니티</span>
+		</div>
+	</div>
+	<form id="login-form">
+		{% csrf_token %}
+		<div class="login-input col-lg-24 col-md-24 col-sm-24 col-xs-24">
+			<input id="login-input-email" name="id" placeholder="이메일 아이디" autocomplete="off"/>
+			<input id="login-input-password" name="password" placeholder="비밀번호" type="password" autocomplete="off" />
+			<input class="button" type="submit" value="로그인"/>
+		</div>
+	</form>
+	<div class="login-button-wrapper col-lg-24 col-md-24 col-sm-24 col-xs-24">
+		<woot-click href="/login/intro">
+			<div class="login-button button">우트에 대해 더 알아보기</div>
+		</woot-click>
+	</div>
+</div>

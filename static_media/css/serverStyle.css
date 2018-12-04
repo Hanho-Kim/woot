@@ -374,6 +374,30 @@
   line-height:1.5em;
   font-size:12px;
 }
+
+.signup-address-block-result{
+  position:relative;
+  display:none;
+}
+.signup-address-block-result .title{
+  font-size:16px;
+  color:rgb(38,38,38);
+  font-weight:600;
+  margin-bottom:5px;
+  margin-top:10px;
+}
+.signup-address-block-result ul li{
+  padding:8px 5px;
+  line-height:1.5em;
+  font-size:13px;
+}
+.signup-address-block-result ul li .block-title{
+  font-weight:600;
+}
+.signup-address-block-result ul li .block-subtitle{
+  color:rgb(110,110,110);
+}
+
 .signup-confirm-model-house{
   position:absolute;
   top:35vh;
@@ -1461,6 +1485,7 @@
 }
 .gathering-detail-contents{
   padding:20px 25px;
+  padding-bottom:60px;
 }
 .gathering-detail-contents .description{
   margin-bottom:15px;
@@ -1508,9 +1533,15 @@
   border:none;
 }
 .gathering-detail-contents .gathering-footer{
-  position:relative;
+  position:fixed;
   display:block;
-  margin-top:8px;
+  width:100%;
+  left:0px;
+  bottom:0px;
+  z-index:99;
+  padding:3px 5px;
+  padding-bottom:0px;
+  background-color:white;
 }
 .gathering-detail-contents .gathering-footer .button-like{
   position:relative;
@@ -2292,6 +2323,7 @@
 }
 .profile-section-info{
   padding:20px;
+  padding-bottom:10px;
 }
 .profile-info-name{
   position:relative;
@@ -2323,6 +2355,29 @@
   padding:3px 6px;
   border-radius:3px;
   margin-right:2px;
+}
+.profile-section-info-2{
+  line-height:1.35em;
+  padding:5px 20px;
+  padding-bottom:10px;
+  font-size:13px;
+}
+.profile-section-info-2-disable{
+  padding:25px 10px;
+  text-align:center;
+  background-color:rgb(245,245,245);
+  font-weight:600;
+  font-size:13px;
+}
+.profile-section-info-2-table{
+  color:rgb(38,38,38);
+  padding:0px;
+  font-size:13px;
+}
+.profile-section-info-2-table tr td:first-child{
+  font-weight:600;
+  padding-right:5px;
+  padding-bottom:5px;
 }
 .profile-section-statistics{
   position:relative;

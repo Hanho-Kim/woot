@@ -64,12 +64,12 @@ def apiv1(request):
 			else:
 				return HttpResponse(1)
 		elif(pathSplit[4] == "signupBlockCheck"): 
-			# 블록 유무 확인
+			# 해당 주소에 가입가능한 블록 유무 확인
 			# request.GET.get('address')로 주소 전송함. 판단해서 블록 유무 및 정보 알려줌
 			if(1 == 0):
 				return HttpResponse(0)
 			else:
-				return HttpResponse('{"bid":1,"bname":"법조타운B"}')
+				return HttpResponse('[{"bid":1,"title":"법조타운B","subtitle":"#20대 #대학생"},{"bid":2,"title":"법조타운A","subtitle":"#20대 #대학생"},{"bid":3,"title":"법조타운C","subtitle":"#20대 #대학생"}]')
 		elif(pathSplit[4] == "highlight"):
 			# 푸터나 헤더 메뉴중 하이라이트 표시할 것 (새소식 등)
 			# Footer의 경우 ["home","gathering","write","board","people"] 형태로 return
@@ -148,7 +148,11 @@ def apiv1(request):
 				return HttpResponse(json.dumps(directExampleChatInfo))
 
 	if(pathSplit[3] == "post"):
-		if(pathSplit[4] == "like"):
+		if(pathSplit[4] == "authentification"):
+			#로그인 정보 받아와서 로그인 시킬지 말지 결정
+			return HttpResponse(1)
+
+		elif(pathSplit[4] == "like"):
 			# 라이크 누르기 (postid를 pid로 받음)
 			# request.POST.get("pid")
 			return HttpResponse(1)
