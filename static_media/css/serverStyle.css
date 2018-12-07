@@ -524,6 +524,14 @@
   padding:20px 20px;
   border:2px solid rgb(230,230,230);
 }
+.signup-confirm-form-wrapper .contents .close{
+  opacity:1;
+  position:absolute;
+  top:0px;
+  right:0px;
+  color:rgb(140,140,140);
+  padding:10px 15px;
+}
 .signup-confirm-form-wrapper .image{
   position:relative;
   width:180px;
@@ -1287,6 +1295,13 @@
   background-color:rgba(38,38,38,0.5);
   font-size:13px;
 }
+.gathering-banner .close-button{
+  position:absolute;
+  padding:11px 15px;
+  right:0px;
+  top:0px;
+  font-size:18px;
+}
 .gathering-discover-contents{
   display:block;
   padding:84px 5px 100px 5px;
@@ -1954,6 +1969,61 @@
   font-size:12px;
   color:rgb(140,140,140);
 }
+
+
+#woot-tag-wrapper{
+  position:relative;
+}
+#woot-tag-wrapper ul{
+  list-style-type:none;
+  padding-left:4px;
+}
+#woot-tag-recommendation{
+  border-bottom:1px solid rgb(220,220,220);
+  padding-bottom:8px;
+}
+#woot-tag-recommendation ul{
+  list-style-type:none;
+  padding-left:4px;
+}
+#woot-tag-recommendation li{
+  cursor:pointer;
+}
+
+.woot-tag{
+  display:inline-block;
+  padding:4px 12px;
+  font-size:13px;
+  line-height:13px;
+  border-radius:4px;
+  background-color:rgb(230,230,230);
+  margin-right:4px;
+  margin-top:8px;
+  margin-bottom:0px;
+}
+#woot-tag-wrapper .woot-tag{
+  background-color:#45aaf2;
+  color:white;
+  padding-right:8px;
+}
+#woot-tag-wrapper .woot-tag i{
+  margin-left:5px;
+}
+.woot-tag-input-container{
+  display:inline-block;
+  padding-left:0px;
+  margin-bottom:8px;
+}
+#woot-tag-input{
+  font-size:14px;
+  line-height:14px;
+  border:0px;
+  outline:none;
+  padding:0px;
+  padding-left:3px;
+  height:24px;
+}
+
 #write-gathering-input-woot-invitation-fake{
   padding-left:30px;
 }
