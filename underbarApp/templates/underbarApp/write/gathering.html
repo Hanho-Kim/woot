@@ -2,82 +2,87 @@
 
 <div class="write-contents row">
 	<div class="write-section col-lg-24 col-md-24 col-sm-24 col-xs-24">
-		<div class="write-section-title">
-			<span>스티커</span>
-		</div>
-		<input type="hidden" id="write-gathering-input-sticker" value="1"/>
-		<div class="write-section-item-gathering-sticker">
-			<div class="write-gathering-sticker button selected" style="background-image:url('https://i.pinimg.com/564x/11/d3/db/11d3dbc8d9c796332f643fca8886ad55.jpg')" data-sticker="1"></div>
-			<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/87/5b/9a/875b9a57c0670dfc5505be69dda9c6bf.jpg')" data-sticker="2"></div>
-			<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/a2/ee/8e/a2ee8ef87219bef3eef4cbda5fb99fd1.jpg')" data-sticker="3"></div>
-			<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/236x/f3/a4/5c/f3a45c8d35e793717a78b2f7adaed577.jpg')" data-sticker="4"></div>
-			<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/11/d3/db/11d3dbc8d9c796332f643fca8886ad55.jpg')" data-sticker="5"></div>
-			<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/87/5b/9a/875b9a57c0670dfc5505be69dda9c6bf.jpg')" data-sticker="6"></div>
-			<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/a2/ee/8e/a2ee8ef87219bef3eef4cbda5fb99fd1.jpg')" data-sticker="7"></div>
-			<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/236x/f3/a4/5c/f3a45c8d35e793717a78b2f7adaed577.jpg')" data-sticker="8"></div>
-		</div>
-
-		<div class="write-section-title">
-			<span>상세정보</span>
-		</div>
-		<div class="write-section-item">
-			<input id="write-gathering-input-title" placeholder="게더링 이름을 입력해주세요"/>
-		</div>
-		<div class="write-section-item">
-			<textarea id="write-gathering-input-description" placeholder="게더링을 간단하게 설명해주세요"></textarea>
-		</div>
-		<div class="write-section-item">
-			<span class="icon ion-ios-location"></span>
-			<input id="write-gathering-input-location" placeholder="게더링 장소를 정해주세요"/>
-		</div>
-
-		<div class="write-section-item">
-			<span class="icon ion-calendar"></span>
-			<input id="write-gathering-input-time-fake" placeholder="게더링 시간을 정해주세요" readonly/>
-			<input type="hidden" id="write-gathering-input-time"/>
-		</div>
-
-		<div class="write-section-title">
-			<span>공개범위</span>
-		</div>
-		<div class="write-section-item write-section-item-radio">
-			<div class="write-section-item-radio-wrapper">
-				<label class="radio-container">전체공개
-				  <input type="radio" checked="checked" name="radio">
-				  <span class="checkmark"></span>
-				</label>
-				<label class="radio-container">내 우트 공개
-				  <input type="radio" name="radio">
-				  <span class="checkmark"></span>
-				</label>
+		<form id="write-gathering-form">
+			<div class="write-section-title">
+				<span>스티커</span>
 			</div>
-		</div>
-		<div class="write-section-title">
-			<span>추가 옵션</span>
-		</div>
-		<div class="write-section-item">
-			<span class="icon ion-ios-people"></span>
-			<input id="write-gathering-input-maxpeople" class="write-gathering-input-number" type="number" placeholder="최대 인원을 정해주세요"/>
-		</div>
-		<div class="write-section-item">
-			<span class="icon ion-ios-person"></span>
-			<input id="write-gathering-input-agelimit" class="write-gathering-input-number" type="hidden"/>
-			<input id="write-gathering-input-agelimit-fake" placeholder="참가자의 나이 제한을 정해주세요" readonly/>
-		</div>
-
-		<div class="write-section-item">
-			<input id="write-gathering-input-mintime" placeholder="지금부터"/>
-			<span class="subtitle">시간 동안</span>
-		</div>
-		<div class="write-section-item">
-			<input id="write-gathering-input-minpeople" placeholder="최소"/>
-			<span class="subtitle">명 이상 모집시</span>
-		</div>
-
-		<div class="write-section-item">
-			<div class="write-section-submit button" id="write-gathering-submit">
-				<span>게더링 만들기</span>
+			<input type="hidden" id="write-gathering-input-sticker" name="sticker" value="1"/>
+			<div class="write-section-item-gathering-sticker">
+				<div class="write-gathering-sticker button selected" style="background-image:url('https://i.pinimg.com/564x/11/d3/db/11d3dbc8d9c796332f643fca8886ad55.jpg')" data-sticker="1"></div>
+				<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/87/5b/9a/875b9a57c0670dfc5505be69dda9c6bf.jpg')" data-sticker="2"></div>
+				<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/a2/ee/8e/a2ee8ef87219bef3eef4cbda5fb99fd1.jpg')" data-sticker="3"></div>
+				<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/236x/f3/a4/5c/f3a45c8d35e793717a78b2f7adaed577.jpg')" data-sticker="4"></div>
+				<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/11/d3/db/11d3dbc8d9c796332f643fca8886ad55.jpg')" data-sticker="5"></div>
+				<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/87/5b/9a/875b9a57c0670dfc5505be69dda9c6bf.jpg')" data-sticker="6"></div>
+				<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/564x/a2/ee/8e/a2ee8ef87219bef3eef4cbda5fb99fd1.jpg')" data-sticker="7"></div>
+				<div class="write-gathering-sticker button" style="background-image:url('https://i.pinimg.com/236x/f3/a4/5c/f3a45c8d35e793717a78b2f7adaed577.jpg')" data-sticker="8"></div>
 			</div>
-		</div>
+
+			<div class="write-section-title">
+				<span>상세정보</span>
+			</div>
+			<div class="write-section-item">
+				<input id="write-gathering-input-title" name="title" placeholder="게더링 이름을 입력해주세요"/>
+			</div>
+			<div class="write-section-item">
+				<textarea id="write-gathering-input-description" name="content" placeholder="게더링을 간단하게 설명해주세요"></textarea>
+			</div>
+			<div class="write-section-item">
+				<span class="icon ion-ios-location"></span>
+				<input id="write-gathering-input-location" name="address" placeholder="게더링 장소를 정해주세요"/>
+			</div>
+
+			<div class="write-section-item">
+				<span class="icon ion-calendar"></span>
+				<input id="write-gathering-input-time-fake" placeholder="게더링 시간을 정해주세요" readonly/>
+				<input type="hidden" name="datetime_0" id="write-gathering-input-time-date0"/>
+				<input type="hidden" name="datetime_1" id="write-gathering-input-time-date1"/>
+			</div>
+			<div class="write-section-item">
+				<input id="write-gathering-input-prestage" placeholder="프리스테이지"/>
+				<input name="duration" id="write-gathering-input-prestage-duration" type="hidden"/>
+				<input name="min_num_people" id="write-gathering-input-prestage-minpeople" type="hidden"/>
+			</div>
+
+			<div class="write-section-title">
+				<span>공개범위</span>
+			</div>
+			<div class="write-section-item write-section-item-radio">
+				<div class="write-section-item-radio-wrapper">
+					<label class="radio-container">전체공개
+					  <input type="radio" checked="checked" name="privacy" value="1">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="radio-container">내 우트 공개
+					  <input type="radio" name="privacy" value="0">
+					  <span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+			<div class="write-section-title">
+				<span>추가 옵션</span>
+			</div>
+			<div class="write-section-item">
+				<span class="icon ion-ios-people"></span>
+
+				<input name="has_max_num_people" id="write-gathering-input-maxpeople-has" type="hidden" value="0">
+				<input name="max_num_people" id="write-gathering-input-maxpeople" class="write-gathering-input-number" type="number" placeholder="최대 인원을 정해주세요"/>
+			</div>
+			<div class="write-section-item">
+				<span class="icon ion-ios-person"></span>
+				
+				<input name="has_age_limit" id="write-gathering-input-agelimit-has" type="hidden" value="0">
+
+				<input name="min_age" id="write-gathering-input-agelimit-min" class="write-gathering-input-number" type="hidden"/>
+				<input name="max_age" id="write-gathering-input-agelimit-max" class="write-gathering-input-number" type="hidden"/>
+				<input id="write-gathering-input-agelimit-fake" placeholder="참가자의 나이 제한을 정해주세요" readonly/>
+			</div>
+
+			<div class="write-section-item">
+				<div class="write-section-submit button" id="write-gathering-submit">
+					<span>게더링 만들기</span>
+				</div>
+			</div>
+		</form>
 	</div>
 </div>
